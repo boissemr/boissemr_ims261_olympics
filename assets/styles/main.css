@@ -1,18 +1,25 @@
 /* * * * * * * * * * * * * * * * * * * * * * * *
 html elements
 * * * * * * * * * * * * * * * * * * * * * * * */
+* {
+	transition: all .3s ease-out;
+}
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	margin: 0;
+	color: #666;
 }
 header {
-	padding: 50px;
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	padding: 20px 0 2px 0;
 	text-align: center;
-	margin: 0 0 0;
+	margin: 0;
 }
 #container {
 	text-align: center;
-	padding: 0 25px 50px;
+	padding: 200px 25px 50px;
 	/*transform: rotate(270deg);*/
 }
 h1, h2 {
@@ -20,17 +27,42 @@ h1, h2 {
 }
 h1 {
 	font-size: 30px;
+	color: #000;
 }
 h2 {
 	font-size: 16px;
 	color: #666;
+}
+h3, p {
+	display: block;
+	font-weight: normal;
+	text-align: left;
+	width: 700px;
+	margin: 30px auto 10px;
+	color: inherit;
+}
+p {
+	margin: 0 auto;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: #D4AF37;
+}
+footer {
+	margin-top: 150px;
+	padding: 50px 0 50px;
+	background-color: #666;
+	color: #fff;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * *
 generic svg elements
 * * * * * * * * * * * * * * * * * * * * * * * */
 text {
-	fill: black;
+	fill: #666;
+	pointer-events: none;
 }
 circle {
 	fill: #666;
@@ -51,4 +83,28 @@ specific svg elements
 .barForeground, .totalPieForeground {
 	fill: #D4AF37;
 }
-
+.countryName {
+	font-size: 18;
+	font-weight: bold;
+	fill: #000;
+}
+.hoverer rect {
+	fill: #fff;
+	opacity: 0.0;
+}
+.hoverer text {
+	fill: black;
+	opacity: 1.0;
+	font-weight: bold;
+	opacity: 0.0;
+}
+.hoverer.fadeMe.on rect {
+	opacity: 0.5;
+}
+.hoverer.fadeMe.on text {
+	opacity: 1.0;
+}
+.countryName.on, .yearText.on {
+	fill: #D4AF37;
+	font-size: 20px;
+}

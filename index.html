@@ -8,18 +8,29 @@
 	<script src="assets/scripts/d3.v2.min.js"></script>
 	<script src="assets/scripts/main.js"></script>
 
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/styles/main.css">
 </head>
 <body>
 	<header>
 		<h1>Olympics Home Advantage</h1>
-		<h2>Matt Boisseau | IMS261</h2>
+		<div id="countryNames"></div>
 	</header>
 	<div id="container">
-		<div id="totalPie"></div>
-		<div id="percentageBars"></div>
-		<div id="countryNames"></div>
-		<div id="dotPlot"></div>
+		<!--<div id="totalPie"></div>-->
+		<h3>Average Medals per Year</h3>
+		<div class="vis" id="averageBars"></div>
+		<h3>Medals Won by Year</h3>
+		<div class="vis" id="dotPlot"></div>
+		<h3>Total Medals Won</h3>
+		<div class="vis" id="totalBars"></div>
+		<h3>Percentage of Total Medals Won at Home</h3>
+		<div class="vis" id="percentageBars"></div>
 	</div>
+	<footer>
+		<p><a href="http://www.mboisseau.com">Matt Boisseau</a> 2016</p>
+		<p>Made for IMS 261 at <a target="blank" href="https://www.miamioh.edu/">Miami University</a></p>
+		<p>Source: <a target="blank" href="http://demos.telerik.com/aspnet-ajax/sample-applications/olympic-games/">telerik.com</a>
+	</footer>
 </body>
 </html>
